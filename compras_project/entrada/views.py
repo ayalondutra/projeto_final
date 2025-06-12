@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from .models import Entrada
 from .forms import EntradaForm
 
+
+
 from .serializers import EntradaSerializer
 from rest_framework import viewsets, permissions
 
@@ -23,3 +25,4 @@ def cadastrar_entrada(request):
     else:
         form = EntradaForm()
     return render(request, 'cadastrar_entrada.html', {'form': form})
+
